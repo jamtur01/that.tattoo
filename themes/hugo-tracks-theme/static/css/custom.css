@@ -1,0 +1,6 @@
+/* your styles go here */
+
+img[src*='#center'] {
+    display: block;
+    margin: auto;
+}

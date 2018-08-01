@@ -1,0 +1,66 @@
+
+{{ if eq .Site.Params.pages true }}
+{{ $paginator := .Paginate (where .Pages "Type" "tattoo") }}
+{{ range .Paginator.Pages }}
+<div class="row content">
+  {{ if and (isset .Params "image") .Params.image }}
+  <a href="{{ .Permalink }} ">
+    <div class="col-sm-6 content-image" style="background-image: url({{ .Params.image }})">
+    </div>
+  </a>
+  <div class="col-sm-6 content-excerpt">
+  {{ else }}
+  <div class="col-sm-12 content-excerpt">
+  {{ end }}
+    <div class="row">
+      <div class="col-md-12">
+        <div class="row content-title">
+          <h2> <a href="{{ .Permalink }} "> {{ .Title }} </a> </h2>
+        </div>
+        <div class="row content-summary">
+          {{ .Summary }}
+          <br />
+          <a class="more-link" href="{{ .Permalink }} ">More on the tattoo...</a>
+        </div>
+        <div class="row content-date">
+          Posted on: {{ .Date.Format "Monday, January 2, 2006" }}
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+{{ end }}
+{{ template "_internal/pagination.html" . }}
+{{else}}
+{{ range $index, $element := (where .Data.Pages "Section" "tattoo") }}
+<div class="row content">
+  {{ if and (isset .Params "image") .Params.image }}
+  <a href="{{ .Permalink }} ">
+    <div class="col-sm-6 content-image" style="background-image: url({{ .Params.image }})">
+    </div>
+  </a>
+  <div class="col-sm-6 content-excerpt">
+  {{ else }}
+  <div class="col-sm-12 content-excerpt">
+  {{ end }}
+    <div class="row">
+      <div class="col-md-12">
+        <div class="row content-title">
+          <h2> <a href="{{ .Permalink }} "> {{ .Title }} </a> </h2>
+        </div>
+        <div class="row content-summary">
+          {{ .Summary }}
+          <br />
+          <a class="more-link" href="{{ .Permalink }} ">More on the tattoo...</a>
+        </div>
+        <div class="row content-date">
+          Posted on: {{ .Date.Format "Monday, January 2, 2006" }}
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+{{ end }}
+{{ end }}

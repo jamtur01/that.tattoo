@@ -1,0 +1,40 @@
+<div class="row">
+  <div class="col-md-12 footer-title">
+    <h2>
+      {{ with .Site.Title }}
+      <a href=""> {{ . }} </a>
+      {{ end }}
+    </h2>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-12 footer-menu">
+      <a href="/">Home</a>
+      {{ range $name, $taxonomy := .Site.Params.Navlinks }}
+      {{ if ne $taxonomy.name "Home" }}
+      <a href="/{{ $taxonomy.url | urlize }}">{{ $taxonomy.name }}</a>
+      {{ end }}
+      {{ end }}
+  </div>
+</div>
+<div class="row">
+  <div class="col-sm-12">
+    <div class="social-media-block-footer">
+      {{ with .Site.Params.social.twitter }}
+      <a href="{{ . }}" data-animate-hover="pulse" class="external twitter">
+        <i class="fa fa-twitter"></i>
+      </a>
+      {{end}}
+      {{ with .Site.Params.social.instagram }}
+      <a href="{{ . }}" title="" class="external instagram">
+        <i class="fa fa-instagram"></i>
+      </a>
+      {{end}}
+      {{ with .Site.Params.social.email }}
+      <a href="mailto:{{ . }}" data-animate-hover="pulse" class="email">
+        <i class="fa fa-envelope"></i>
+      </a>
+      {{end}}
+    </div>
+  </div>
+</div>

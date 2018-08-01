@@ -1,46 +1,33 @@
-baseurl         = "/"
-theme           = "casper-two"
-languageCode    = "en-US"
-disqusShortname = ""
-paginate        = 6
-#SectionPagesMenu = "main"
+baseurl = "https://that.tattoo/"
+title = "That Tattoo"
+theme = "hugo-tracks-theme"
+languageCode = "en-us"
+paginate=5
 
 [params]
-  title       = "That.Tattoo"
-  subtitle    = "What about that tattoo?"
+  # Use custom.css for your custom styling
+  style = "default"
+  pages = true
+  description = "A collection of interviews asking people about their favorite tattoo and what it means to them"
+  copyright = "&copy;2018 James Turnbull"
+  sidebarAbout = [
+    "A collection of interviews asking people about their favorite tattoo and what it means to them."
+  ]
 
-  cover       = "img/blog-cover.jpg"
-  description = "Something"
-  metaDescription = ""
-  googleAnalytics = ""
-  customCSS = []
-  RSSLink = ""
-
-  twitterName = "That_Tattoo"
-  fbName = ""
-  githubName = "jamtur01"
-
-  logo = "hugo-logo.png"
-  orgName = "TT"
-  orgWebsite = "https://www.that.tattoo"
-  orgDescription = "Here is a description placeholder for your org"
-
-  author = "TT"
-  authorAvatar = "img/ghost-icon.png"
-  authorLocation = "New York, NY"
-  authorWebsite = "https://kartar.net"
-  authorDescription = "Describe yourself.."
-
-  pageNotFoundTitle = "404 - Page not found"
-
-  #casper or caspertwo
-  singleViewStyle = "casper"
-
-[permalinks]
-  post = "/:slug/"
-
-[[menu.main]]
+  # Nav links in the side bar
+  [[params.navlinks]]
   name = "Home"
-  url = "/"
-  weight = 200
+  url = ""
 
+  [[params.navlinks]]
+  name = "Archives"
+  url = "archives/"
+
+  [[params.navlinks]]
+  name = "About"
+  url = "about/"
+
+  [params.social]
+  email         = "james+thattattoo@lovedthanlost.net"
+  twitter       = "https://twitter.com/that_tattoo"
+  instagram     = "https://www.instagram.com/that_tattoo_/"

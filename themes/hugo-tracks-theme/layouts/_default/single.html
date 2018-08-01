@@ -1,0 +1,65 @@
+{{ define "main" }}
+
+<div class="col-md-12 entry">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="entry-header">
+       {{ .Title }}
+      </div>
+    </div>
+  </div>
+  {{ if and (isset .Params "subtitle") .Params.subtitle }}
+  <div class="row">
+    <div class="col-md-12">
+      <div class="entry-subtitle">
+       {{ .Params.subtitle }}
+      </div>
+    </div>
+  </div>
+  {{ end }}
+  {{ if and (isset .Params "image") .Params.image }}
+  <div class="row">
+    <div class="col-md-12 content-image">
+      <img src="/{{ .Params.image }}" class="img-responsive">
+    </div>
+  </div>
+  {{ end }}
+  <div class="row">
+    <div class="col-md-12">
+      <div class="entry-content">
+        {{ .Content }}
+      </div>
+    </div>
+  </div>
+
+  <hr/>
+
+  <div class="row">
+    <div class="col-md-12">
+      <div class="entry-meta">
+        {{ .Date.Format "Monday, January 2, 2006" }}
+      </div>
+    </div>
+  </div>
+
+  <hr/>
+
+  {{ if isset .Params "tags" }}
+  {{ $tagsLen := len .Params.tags }}
+  {{ if gt $tagsLen 0 }}
+  <div class="row">
+    <div class="col-md-12">
+      <div class="entry-meta">
+      <i class="fa fa-tags"></i>
+      {{ range $k, $v := .Params.tags }}
+      {{ $url := printf "tags/%s" (. | urlize | lower) }}
+      <a class="entry-tags" href="{{ $url | absURL }}">{{ . }}</a>
+      {{ if lt $k (sub $tagsLen 1) }}&middot;{{ end }}
+      {{ end }}
+      </div>
+    </div>
+   </div>
+  {{ end }}
+  {{ end }}
+</div>
+{{ end }}
