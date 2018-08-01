@@ -1,0 +1,46 @@
+baseurl         = "/"
+theme           = "casper-two"
+languageCode    = "en-US"
+disqusShortname = ""
+paginate        = 6
+#SectionPagesMenu = "main"
+
+[params]
+  title       = "That.Tattoo"
+  subtitle    = "What about that tattoo?"
+
+  cover       = "img/blog-cover.jpg"
+  description = "Something"
+  metaDescription = ""
+  googleAnalytics = ""
+  customCSS = []
+  RSSLink = ""
+
+  twitterName = "That_Tattoo"
+  fbName = ""
+  githubName = "jamtur01"
+
+  logo = "hugo-logo.png"
+  orgName = "TT"
+  orgWebsite = "https://www.that.tattoo"
+  orgDescription = "Here is a description placeholder for your org"
+
+  author = "TT"
+  authorAvatar = "img/ghost-icon.png"
+  authorLocation = "New York, NY"
+  authorWebsite = "https://kartar.net"
+  authorDescription = "Describe yourself.."
+
+  pageNotFoundTitle = "404 - Page not found"
+
+  #casper or caspertwo
+  singleViewStyle = "casper"
+
+[permalinks]
+  post = "/:slug/"
+
+[[menu.main]]
+  name = "Home"
+  url = "/"
+  weight = 200
+
