@@ -9,7 +9,7 @@
   </div>
 </div>
 
-{{ range $index, $element := (where .Data.Pages "Section" "tattoo") }}
+{{ range $index, $element := (where .Data.Pages.ByDate.Reverse "Section" "tattoo") }}
 {{if mod (add $index 1) 2 }}
 <div class="row content">
   {{ if and (isset .Params "image") .Params.image }}

@@ -6,7 +6,7 @@
         {{ with .Site.GetPage "section" "tattoo" }}
         {{ range .Data.Pages.GroupByDate "2006" }}
           <div class="archive-title"><time><h1>{{ .Key }}</h1></time></div>
-        {{ range .Pages }}
+        {{ range .Pages.ByDate.Reverse }}
         <div class="content-title">
            <h3> <a href="{{ .Permalink }} "> {{ .Title }} </a> </h3>
         </div>

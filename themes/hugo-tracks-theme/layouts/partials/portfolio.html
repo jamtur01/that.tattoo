@@ -1,6 +1,6 @@
 
 {{ if eq .Site.Params.pages true }}
-{{ $paginator := .Paginate (where .Pages "Type" "tattoo") }}
+{{ $paginator := .Paginate (where .Pages.ByDate.Reverse "Type" "tattoo") }}
 {{ range .Paginator.Pages }}
 <div class="row content">
   {{ if and (isset .Params "image") .Params.image }}
@@ -33,7 +33,7 @@
 {{ end }}
 {{ template "_internal/pagination.html" . }}
 {{else}}
-{{ range $index, $element := (where .Data.Pages "Section" "tattoo") }}
+{{ range $index, $element := (where .Data.Pages.ByDate.Reverse "Section" "tattoo") }}
 <div class="row content">
   {{ if and (isset .Params "image") .Params.image }}
   <a href="{{ .Permalink }} ">
