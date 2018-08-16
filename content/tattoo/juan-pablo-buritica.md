@@ -2,7 +2,7 @@
 showonlyimage = true
 draft = false
 image = "img/portfolio/buritica.jpg"
-date = "2018-08-01T18:25:22+05:30"
+date = "2018-08-14T18:25:22+05:30"
 title = "Juan Pablo Buriticá"
 subtitle = "Kraken tattoo"
 tags = [ "kraken", "ship", "migration" ]
