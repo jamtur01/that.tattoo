@@ -17,8 +17,8 @@ Yes, absolutely! Either via [email](mailto:james+thattattoo@lovedthanlost.net) o
 
 ### What do I need if I am interviewed?
 
-1. A high quality image of the tattoo.
-2. One or two paragraphs on its meaning or why you like it.
+1. A high quality image of the tattoo (or tattoos if you'd like!).
+2. One or two paragraphs on meaning or why you like the tattoo, and who tattooed you.
 3. A one sentence bio with any links you like to your personal stuff - Twitter, etc.
 
 ### Can I make my own version of the site?

@@ -2,7 +2,7 @@
 showonlyimage = true
 draft = false
 image = "img/portfolio/orphans_tattoo.jpg"
-date = "2018-08-01T18:25:22+05:30"
+date = "2018-09-01T18:25:22+05:30"
 title = "James Turnbull"
 subtitle = "Orphans of the Sky book cover tattoo"
 tags = [ "sci-fi", "books" ]
